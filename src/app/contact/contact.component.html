@@ -1,0 +1,78 @@
+<!-- Default form contact -->
+
+<main class="contactBackground">
+
+
+  <div class="container">
+
+    <div class="row topRow">
+      <div class="col-md-1"></div>
+
+      <div class="col-md-10 mx-auto">
+        <div class="text-center">
+          <!--Instagram-->
+          <h3>Connect with us on instagram!</h3>
+          <button type="button" mdbBtn class="btn-ins waves-light instagramBtn" mdbWavesEffect>
+            <i class="fab fa-instagram"></i></button>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <p> Use the form below to contact us and set up an appointment to talk about your upcoming project.</p>
+        <p> Or give us call directly at <a id="phoneNumber" href="tel:+1-845-594-4086">(845)594-4086</a></p>
+      </div>
+      <div class="col-md-1"></div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <form class="text-center border border-light formBackground" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <br>
+          <p class="h4 mb-4">Contact us</p>
+          
+          <!-- Name -->
+          <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+            class="form-control mb-4" placeholder="Name">
+
+          <!-- Email -->
+          <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+            class="form-control mb-4" placeholder="E-mail">
+
+          <!-- Phone -->
+          <input type="phone" formControlName="contactFormPhone" id="defaultContactFormPhone" mdbInput
+            class="form-control mb-4" placeholder="Phone Number">
+
+
+          <!-- Message -->
+          <div class="form-group">
+            <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput
+              id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+          </div>
+
+          <!-- Copy -->
+          <div class="custom-control custom-checkbox mb-4">
+            <input formControlName="contactFormCopy" type="checkbox" class="custom-control-input"
+              id="defaultContactFormCopy">
+            <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+          </div>
+
+          <!-- Send button -->
+          <button mdbBtn id="button" color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+            mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+
+        </form>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+  </div>
+
+</main>

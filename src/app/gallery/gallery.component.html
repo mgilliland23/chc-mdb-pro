@@ -1,0 +1,64 @@
+<!--Responsive image with light overlay on hover for each of the 4 different picture categories.
+    Clicking on an image will direct to the categories slideshow page
+    Create a class for the card and pass it a 'title' and 'default-img'
+    to construct each category's card-->
+
+<div class="vh-100 galleryContainer">
+
+    <div class="row no-gutters">
+
+      <!-- Category 1-->
+      <div class="col-sm">
+          <!-- routerLink="slideshow"  -->
+        <a (click)="openModal()">
+          <div class="view overlay">
+            <img src="https://s3.amazonaws.com/chc/images/framing-pics/def.JPEG" class="img-fluid " alt="placeholder">
+            <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+              <p class="white-text">Framing/Construction</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <!-- Category 2-->
+      <div class="col-sm">
+    
+        <div class="view overlay">
+          <img src="https://s3.amazonaws.com/chc/images/renovation-pics/def.JPEG" class="img-fluid " alt="placeholder">
+          <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+            <p class="white-text">Renovations</p>
+          </div>
+        </div>
+    
+      </div>
+    
+    </div>
+    
+    <div class="row no-gutters">
+    
+      <!-- Category 3-->
+      <div class="col-sm">
+    
+        <div class="view overlay">
+          <img src="https://s3.amazonaws.com/chc/images/interior-pics/def.JPEG" class="img-fluid " alt="placeholder">
+          <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+            <p class="white-text">Interior Finish</p>
+          </div>
+        </div>
+    
+      </div>
+    
+      <!-- Category 4-->
+      <div class="col-sm">
+    
+        <div class="view overlay">
+          <img src="https://s3.amazonaws.com/chc/images/exterior-pics/def.JPEG" class="img-fluid " alt="placeholder">
+          <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+            <p class="white-text">Exterior Finish</p>
+          </div>
+        </div>
+    
+      </div>
+    
+      </div>
+    </div>  

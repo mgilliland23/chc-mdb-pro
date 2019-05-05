@@ -1,0 +1,28 @@
+html,
+body,
+.view {
+ // height: 100vh;
+}
+
+// /* Full Page Carousel itself*/
+// .carousel {
+//   height: 100vh;
+// }
+
+.carousel .carousel-inner {
+  //height: 100vh;
+  width: 100vw;
+}
+
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  //height: 100vh;
+  width: 100vw;
+}
+
+img {
+  &.d-block {
+    //height: 100vh;
+    width: 100vw;
+  }
+}

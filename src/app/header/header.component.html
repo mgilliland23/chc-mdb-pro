@@ -1,0 +1,35 @@
+
+
+ <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false" [iconBackground]="['custom-hamburger-class']">
+  
+  <mdb-navbar-brand>
+    <a class="logo navbar-brand" routerLink="">
+      <strong>Cherry Hill Construction</strong>
+    </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item  waves-light" mdbWavesEffect [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/home" >
+          Home
+          <span class="sr-only"></span>
+        </a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/gallery']" >Gallery</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/testimonial']">Testimonials</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+
+
+<!-- Main -->
+
+<!-- /.Main -->
