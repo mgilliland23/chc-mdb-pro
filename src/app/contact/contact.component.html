@@ -12,7 +12,7 @@
         <div class="text-center">
           <!--Instagram-->
           <h3>Connect with us on instagram!</h3>
-          <button type="button" mdbBtn class="btn-ins waves-light instagramBtn" mdbWavesEffect>
+          <button type="button" mdbBtn class="btn-ins waves-light instagramBtn" mdbWavesEffect (click)="openInstagram()">
             <i class="fab fa-instagram"></i></button>
         </div>
       </div>
@@ -37,7 +37,7 @@
         <form class="text-center border border-light formBackground" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <br>
           <p class="h4 mb-4">Contact us</p>
-          
+
           <!-- Name -->
           <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
             class="form-control mb-4" placeholder="Name">

@@ -1,8 +1,8 @@
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
- 
-  
+
+
     > .col,
     > [class*="col-"] {
       padding-right:0;
@@ -14,3 +14,15 @@
     height: 100vh;
   }
 
+  .modal-fluid{
+    width: 80%;
+    margin: auto;
+  }
+
+  #close{
+    z-index: 10000;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+  }

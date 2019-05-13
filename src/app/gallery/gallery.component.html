@@ -4,61 +4,89 @@
     to construct each category's card-->
 
 <div class="vh-100 galleryContainer">
-
-    <div class="row no-gutters">
-
-      <!-- Category 1-->
-      <div class="col-sm">
-          <!-- routerLink="slideshow"  -->
-        <a (click)="openModal()">
-          <div class="view overlay">
-            <img src="https://s3.amazonaws.com/chc/images/framing-pics/def.JPEG" class="img-fluid " alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-grey-light">
-              <p class="white-text">Framing/Construction</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      <!-- Category 2-->
-      <div class="col-sm">
-    
+  <div class="row no-gutters">
+    <!-- Category 1-->
+    <div class="col-sm">
+      <!-- routerLink="slideshow"  -->
+      <a (click)="slideshowModal.show()">
         <div class="view overlay">
-          <img src="https://s3.amazonaws.com/chc/images/renovation-pics/def.JPEG" class="img-fluid " alt="placeholder">
-          <div class="mask flex-center waves-effect waves-light rgba-grey-light">
-            <p class="white-text">Renovations</p>
+          <img
+            src="https://s3.amazonaws.com/chc/images/framing-pics/def.JPEG"
+            class="img-fluid "
+            alt="placeholder"
+          />
+          <div
+            class="mask flex-center waves-effect waves-light rgba-grey-light"
+          >
+            <p class="white-text">Framing/Construction</p>
           </div>
         </div>
-    
-      </div>
-    
+      </a>
     </div>
-    
-    <div class="row no-gutters">
-    
-      <!-- Category 3-->
-      <div class="col-sm">
-    
-        <div class="view overlay">
-          <img src="https://s3.amazonaws.com/chc/images/interior-pics/def.JPEG" class="img-fluid " alt="placeholder">
-          <div class="mask flex-center waves-effect waves-light rgba-grey-light">
-            <p class="white-text">Interior Finish</p>
-          </div>
+
+    <!-- Category 2-->
+    <div class="col-sm">
+      <div class="view overlay">
+        <img
+          src="https://s3.amazonaws.com/chc/images/renovation-pics/def.JPEG"
+          class="img-fluid "
+          alt="placeholder"
+        />
+        <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+          <p class="white-text">Renovations</p>
         </div>
-    
       </div>
-    
-      <!-- Category 4-->
-      <div class="col-sm">
-    
-        <div class="view overlay">
-          <img src="https://s3.amazonaws.com/chc/images/exterior-pics/def.JPEG" class="img-fluid " alt="placeholder">
-          <div class="mask flex-center waves-effect waves-light rgba-grey-light">
-            <p class="white-text">Exterior Finish</p>
-          </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters">
+    <!-- Category 3-->
+    <div class="col-sm">
+      <div class="view overlay">
+        <img
+          src="https://s3.amazonaws.com/chc/images/interior-pics/def.JPEG"
+          class="img-fluid "
+          alt="placeholder"
+        />
+        <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+          <p class="white-text">Interior Finish</p>
         </div>
-    
       </div>
-    
+    </div>
+
+    <!-- Category 4-->
+    <div class="col-sm">
+      <div class="view overlay">
+        <img
+          src="https://s3.amazonaws.com/chc/images/exterior-pics/def.JPEG"
+          class="img-fluid "
+          alt="placeholder"
+        />
+        <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+          <p class="white-text">Exterior Finish</p>
+        </div>
       </div>
-    </div>  
+    </div>
+  </div>
+</div>
+
+<div
+  mdbModal
+  #slideshowModal="mdb-modal"
+  class="modal fade modal-ext"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fluid" role="document">
+
+    <div class="modal-content">
+        <button id="close" type="button" class="close pull-right" aria-label="Close" (click)="slideshowModal.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+      <app-slideshow></app-slideshow>
+    </div>
+  </div>
+
+</div>

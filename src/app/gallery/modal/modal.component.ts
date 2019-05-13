@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component } from '@angular/core';
+import { MDBModalRef } from 'ng-uikit-pro-standard';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(public modalRef: MDBModalRef) {}
 
 }

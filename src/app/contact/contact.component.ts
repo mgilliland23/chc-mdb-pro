@@ -1,44 +1,54 @@
-import { ConnectionService } from '../connection.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, HostListener } from '@angular/core';
+import { ConnectionService } from "../connection.service";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { Component, HostListener } from "@angular/core";
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: "app-contact",
+  templateUrl: "./contact.component.html",
+  styleUrls: ["./contact.component.scss"]
 })
 export class ContactComponent {
+  contactForm: FormGroup;
+  disabledSubmitButton: boolean = true;
+  optionsSelect: Array<any>;
 
-contactForm: FormGroup;
-disabledSubmitButton: boolean = true;
-optionsSelect: Array<any>;
+  openInstagram(){
+      window.location.href = 'https://www.instagram.com/cherryhillconstructionny/';
+  }
 
-  @HostListener('input') oninput() {
-
-  if (this.contactForm.valid) {
-    this.disabledSubmitButton = false;
+  @HostListener("input") oninput() {
+    if (this.contactForm.valid) {
+      this.disabledSubmitButton = false;
     }
   }
 
-  constructor(private fb: FormBuilder, private connectionService: ConnectionService) {
+  constructor(
+    private fb: FormBuilder,
+    private connectionService: ConnectionService
+  ) {
 
-  this.contactForm = fb.group({
-    'contactFormName': ['', Validators.required],
-    'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
-    'contactFormPhone': ['', Validators.required],
-    'contactFormMessage': ['', Validators.required],
-    'contactFormCopy': [''],
+    this.contactForm = fb.group({
+      contactFormName: ["", Validators.required],
+      contactFormEmail: [
+        "",
+        Validators.compose([Validators.required, Validators.email])
+      ],
+      contactFormPhone: ["", Validators.required],
+      contactFormMessage: ["", Validators.required],
+      contactFormCopy: [""]
     });
   }
 
   onSubmit() {
-    this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-      alert('Your message has been sent.');
-      this.contactForm.reset();
-      this.disabledSubmitButton = true;
-    }, error => {
-      console.log('Error', error);
-    });
+    this.connectionService.sendMessage(this.contactForm.value).subscribe(
+      () => {
+        alert("Your message has been sent.");
+        this.contactForm.reset();
+        this.disabledSubmitButton = true;
+      },
+      error => {
+        console.log("Error", error);
+      }
+    );
   }
-
-  }
+}
