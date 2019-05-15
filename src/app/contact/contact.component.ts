@@ -13,7 +13,7 @@ export class ContactComponent {
   optionsSelect: Array<any>;
 
   openInstagram(){
-      window.location.href = 'https://www.instagram.com/cherryhillconstructionny/';
+      window.open('https://www.instagram.com/cherryhillconstructionny/');
   }
 
   @HostListener("input") oninput() {
